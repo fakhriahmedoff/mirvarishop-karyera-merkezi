@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 <style>
-    @media only screen and (max-width:1024px){
+
         form.cv-form{
             margin-top: 15%;
             display: flex;
@@ -16,21 +16,44 @@
             flex-wrap: wrap;
             row-gap: 15px;
         }
-        form.cv-form input{
-            width: 45%;
+        form.cv-form .cv-input{
+            width: 35%;
             border-radius: 0px;
-            border-color: black;
+            border-width: 1px !important;
+            height: 45px;
+            border-color: #2C2C2C;
         }
-    }
+        form.cv-form input::placeholder{
+            text-align: center;
+            color: #2C2C2C;
+        }
+        .fileinput{
+            width: 35%;
+            border-radius: 0px;
+            border-style: solid;
+            border-width: 1px !important;
+            height: 45px;
+            border-color: #2C2C2C;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input#cv-image{
+            display: none;
+        }
+        .container.even{
+            max-width: 1000px !important; 
+        }
 </style>
 <body>
-    <div class="container">
+    <div class="container even">
         <form action="#" class="cv-form" method="post">
-            <input type="text" placeholder="Ad" class="cv-input">
-            <input type="text" placeholder="Soyad" class="cv-input">
-            <input type="text" placeholder="Əlaqə Nömrəsi" class="cv-input">
-            <input type="text" placeholder="Vakansiyanı Seçin" class="cv-input">
-            <input type="file" name="" id="cv-image">
+            <input  type="text" placeholder="Ad" class="cv-input">
+            <input  type="text" placeholder="Soyad" class="cv-input">
+            <input  type="number" placeholder="Əlaqə Nömrəsi" class="cv-input">
+            <input  type="text" placeholder="Vakansiyanı Seçin" class="cv-input">
+            <label class="fileinput" for="cv-image">Şəkil Əlavə et</label>
+            <input type="file"  name="" id="cv-image">
         </form>
     </div>
     
